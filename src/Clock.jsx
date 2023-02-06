@@ -1,19 +1,10 @@
-import { useState } from "react";
-
-const Clock = () => {
-  let time = new Date().toLocaleTimeString();
-  const [currentTime, setCurrentTime] = useState(time);
-
-  const updateTime = () => {
-    let time = new Date().toLocaleTimeString();
-    setCurrentTime(time);
-  };
-
-  setInterval(updateTime, 1000);
-
+//Component that accepts a single props (time) and returns a how it will render.
+const Clock = (props) => {
   return (
-    <div className="clock">
-      <h1>{currentTime}</h1>
+    <div>
+      <h1>
+        {props.hour}:{props.minute}:{props.second}
+      </h1>
     </div>
   );
 };
