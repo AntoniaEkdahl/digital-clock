@@ -4,7 +4,7 @@ import "./app.css";
 
 function App() {
   let time = new Date();
-  //Create currentTime state with useState hook.
+  //Create currentTime state with useState hook to be able to change the state
   const [currentTime, setCurrentTime] = useState(time);
 
   //Changes the current date object with a new one storing the current date and time.
